@@ -1,0 +1,5 @@
+<ng-container *ngIf="(compactDisk$ | async) as cd; else loading">
+    <h1>{{ cd.title }} by {{ cd.artist }}</h1>
+    <p>Price: {{ cd.price }}</p>
+</ng-container>
+<ng-template #loading>Loading…</ng-template>
